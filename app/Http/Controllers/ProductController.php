@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 
 class ProductController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth:api');
@@ -19,7 +20,7 @@ class ProductController extends Controller
         $product->Title = $request->Title;
         $product->Product_URL = $request->Product_URL;
         $product->State = $request->State;
-        $product->Seller_Name = $request->Seller_Name;
+        $product->Stock = $request->Stock;
         $product->Price = $request->Price;
         $product->save();
         return new ProductResource($product);
@@ -61,7 +62,7 @@ class ProductController extends Controller
             $product->Title = $request->Title;
             $product->Product_URL = $request->Product_URL;
             $product->State = $request->State;
-            $product->Seller_Name = $request->Seller_Name;
+            $product->Stock = $request->Stock;
             $product->Price = $request->Price;
             $product->save();
             return new ProductResource($product);

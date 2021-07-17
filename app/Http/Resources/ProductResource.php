@@ -19,7 +19,7 @@ class ProductResource extends JsonResource
             'Title' => $this->Title,
             'Product_URL' => $this->Product_URL,
             'State' => $this->State,
-            'Seller_Name' => $this->Seller_Name,
+            'Stock' => $this->Stock,
             'Price' => $this->Price,
         ];
     }
